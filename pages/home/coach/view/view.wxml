@@ -1,0 +1,86 @@
+<!--pages/lookCare/view/view.wxml-->
+<view class="content" wx:if="{{loginFlag}}">
+  <view class="lookCare-view fl">
+    <image mode="scaleToFill" src="../../../../static/jiaolian.png"></image>
+    <view class="look-view fljc">
+      <view class="view-name fl f12">
+        <text>刘明</text><view class="f10">私人教练</view>
+      </view>
+      <view class="view-sex f12">
+        <text>男</text>|
+        <text>25岁</text>|
+        <text>工作年限5年</text>
+      </view>
+      <view class="over2 f12">为人和善，教学细心，认真</view>
+    </view>
+  </view>
+  <view class="view-favorable fl tac">
+      <view>
+        <view>36<text>次</text></view>
+        <view>服务次数</view>
+      </view>
+      <view>
+        <view>98%<text>%</text></view>
+        <view>好评率</view>
+      </view>
+    </view>
+    <view class="view-star fl">
+      <text>星级</text>
+      <view>
+        <image mode="aspectFit" wx:for="{{state}}" wx:key="index" src="{{currentList.nursing_workers_avg > 0 ? (currentList.nursing_workers_avg - item > 0 ? (currentList.nursing_workers_avg - item < 1 ? halfUrl : starUrl) : greyUrl) : greyUrl}}"></image>
+      </view>
+      <text>{{currentList.nursing_workers_avg == null ? '0.0' : currentList.nursing_workers_avg}}</text>
+    </view>
+    <view class="view-synopsis">
+      <view>个人简介</view>
+      <text>本人从事健身行业7年，从事健身教练职业5年，能够很好的了解学员的情况，然后根据学员的目的，制定合理的健身计划和饮食计划，帮助学员在最短的时间内，达到最好的训练效果。</text>
+    </view>
+    <view class="view-synopsis view-borde">
+      <view>个人特长</view>
+      <text>为人和善，教学细心，认真</text>
+    </view>
+    <view class="order-line"></view>
+    <view class="view-evaluate pad30 flj">
+      <view>服务评价</view>
+      <view bindtap="bindExamine" data-flag="{{status}}" wx:if="{{evaluateLIstanbul != null}}">查看更多 ></view>
+    </view>
+
+    <view  wx:if="{{evaluateLIstanbul != null}}" class="view-stare tac">好评({{evaluateLIstanbul.nursing_workers_praise == null ? 0 : evaluateLIstanbul.nursing_workers_praise}})</view>
+    <!-- <view  wx:if="{{evaluateLIstanbul != null}}">
+      <view class="view-appraise flj pad30">
+        <view class="fl">
+          <image mode="scaleToFill" wx:key="index" src="{{evaluateLIstanbul.member_headerpic == '' ? '../../../static/head.png' : evaluateLIstanbul.member_headerpic}}"></image>
+          <text>{{evaluateLIstanbul.tel}}</text>
+          <view>
+            <image mode="aspectFit" wx:for="{{state}}" wx:key="index" src="{{evaluateLIstanbul.c_star_rank > 0 ? (evaluateLIstanbul.c_star_rank - item > 0 ? (evaluateLIstanbul.c_star_rank - item >= 1 ? starUrl : halfUrl): greyUrl): greyUrl}}"></image>
+          </view>
+        </view>
+        <view>{{evaluateLIstanbul.create_time}}</view>
+      </view>
+      <view class="view-btn pad30">
+        <view wx:for="{{evaluateLIstanbul.tags_arr}}" wx:key="index">{{item}}</view>
+      </view>
+      <view class="view-text">{{evaluateLIstanbul.c_content}}</view>
+    </view> -->
+
+    <view class="view-evaluation f14 fc tac">暂无评价</view>
+    
+    <view class="viewLine"></view>
+
+    <view class="view-footer tac pf flj">
+      <view class="flj">
+        <text>￥200元/小时</text>
+        <view class="view-view" bindtap="bindCollect">
+          <image src="{{collection == 1 ? starUrl : greyUrl}}" mode="aspectFit"></image>
+          <view>收藏</view>
+        </view>
+      </view>
+      <view  bindtap="subscribe" data-flag="{{status}}"> 我要预约 </view> 
+    </view>
+</view>
+<!-- 暂无数据 -->
+<view-no id="noData"></view-no>
+<!-- authorization -->
+<view style="display: {{loginDataFlag ? 'block' : 'none'}}">
+  <login-view bind:bindLogin="onBindLogin" id='loginView'></login-view>
+</view>

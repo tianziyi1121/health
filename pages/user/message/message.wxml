@@ -1,0 +1,26 @@
+<view class="content">
+  <view class="userData pr">
+    <view class="userName pa fl">
+      <image src="../../../static/head.png" mode="aspectFit"></image>
+      <view>
+        <view class="f16">运动健康007</view>
+        <view class="f14">开通会员，享特权</view>
+      </view>
+    </view>
+    <view>
+      <image src="../../../static/bj.png" mode="aspectFit"></image>
+    </view>
+  </view>
+  <view class="userTitle f16 f0">我的特权</view>
+  <view class="flj privilege pad30">
+    <view><image src="../../../static/1member (1).png"></image></view>
+    <view><image src="../../../static/1member (2).png"></image></view>
+  </view>
+
+  <!-- 暂无数据 -->
+  <view-no id="noData"></view-no>
+  <!-- 上拉加载 -->
+  <view style="display: {{loadingFlag ? 'none' : 'block'}};" class="view-loading">
+    <view-loading id="load"></view-loading>
+  </view>
+</view>

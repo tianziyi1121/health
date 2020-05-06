@@ -1,0 +1,83 @@
+<view class="content">
+<!-- title -->
+   <view class="titleBox" style="height: 80rpx"> 
+    <view class="title">
+      <view class="bindTitle f14 pr {{titleId == 'a1' ? 'active' : ''}}" bindtap="bindTitle" data-id="a1">
+        年 龄<image mode="aspectFit" src="../../../static/{{titleId == 'a1' ? 'aaaaaaa' : 'icon_nurselist_sxbar_triangledown@2x'}}.png"></image>
+      </view>
+      <view class="bindTitle f14 pr {{titleId == 'a2' ? 'active' : ''}}" bindtap="bindTitle" data-id="a2">
+        性 别<image mode="aspectFit" src="../../../static/{{titleId == 'a2' ? 'aaaaaaa' : 'icon_nurselist_sxbar_triangledown@2x'}}.png"></image>
+      </view>
+      <view class="bindTitle f14 pr {{titleId == 'a3' ? 'active' : ''}}" bindtap="bindTitle" data-id="a3">
+        分 类<image mode="aspectFit" src="../../../static/{{titleId == 'a3' ? 'aaaaaaa' : 'icon_nurselist_sxbar_triangledown@2x'}}.png"></image>
+      </view>
+      <view class="bindTitle f14 pr {{titleId == 'a4' ? 'active' : ''}}" bindtap="bindTitle" data-id="a4">
+        工作年限<image mode="aspectFit" src="../../../static/{{titleId == 'a4' ? 'aaaaaaa' : 'icon_nurselist_sxbar_triangledown@2x'}}.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="currentList">
+    <view class="currrentData flj pad30" bindtap="bindList">
+      <view>
+        <image src="../../../static/jiaolian.png"></image>
+      </view>
+      <view>
+        <view class="right flj">
+          <view class="rightContent f6 fljc">
+            <view class="title fl">
+              <view class="f12">刘明</view>
+              <view class="f10">私人教练</view>
+            </view>
+            <view class="f12 overn">
+              <text>男</text>|
+              <text>25岁</text>|
+              <text>工作年限5年</text>
+            </view>
+            <view class="f12 overn">为人和善，教学细心，认真</view>
+          </view>
+          <view class="collect tac">
+            <view catchtap="bindCollect" data-id="id">
+              <image src="../../../static/{{collectId == 'id' ? 'collect_block' : 'collect'}}.png"></image>
+              <view class="f12 f6">收藏</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="flj price">
+      <view></view>
+      <view>
+        <view class="contentLine"></view>
+        <view class="flj purchase">
+          <view class="f14">￥200.00/小时</view>
+          <view class="tac f14" bindtap="bindBuy">立即购买</view>
+        </view>
+      </view>
+    </view>
+    <view class="borderButton"></view>
+  </view>
+
+   <!-- 弹窗 -->
+  <view class="titlePopUp">
+    <view class="shadow pf {{shadowFlag != null ? (shadowFlag ?  'upward1' : 'downward1') : ''}}" wx:if="{{coverUp}}" catchtap="titleVanish"></view>
+    <view class="popUpContent pf {{ titleFlag != null ? (titleFlag ?  'upward' : 'downward') : ''}}">
+      <view class="f0 f14">
+        <view>
+          <view catchtap="bindPart" data-id="a1" class="{{titlePartId == 'a1' ? 'active' : ''}}">101</view>
+        </view>
+        <view>
+          <view catchtap="bindPart" data-id="a2" class="{{titlePartId == 'a2' ? 'active' : ''}}">101</view>
+        </view>
+        <view>
+          <view catchtap="bindPart" data-id="a3" class="{{titlePartId == 'a3' ? 'active' : ''}}">101</view>
+        </view>
+        <view>
+          <view catchtap="bindPart" data-id="a4" class="{{titlePartId == 'a4' ? 'active' : ''}}">101</view>
+        </view>
+        <view>
+          <view catchtap="bindPart" data-id="a5" class="{{titlePartId == 'a5' ? 'active' : ''}}">101</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

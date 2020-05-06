@@ -1,0 +1,104 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/home/coach/view/view",
+    "pages/home/coach/view/details/details",
+    "pages/home/view/view",
+    "pages/home/coach/coach",
+    "pages/index/index",
+    "pages/index/view/view",
+    "pages/indent/apply/apply",
+    "pages/food/food", 
+    "pages/food/view/view",
+    "pages/food/details/details",
+    "pages/indent/view/view",
+    "pages/indent/indent",
+    "pages/product/product",
+    "pages/product/view/view",
+    "pages/product/search/search",
+    "pages/user/user",
+    "pages/user/pay/pay",
+    "pages/user/view/view",
+    "pages/user/user/user",
+    "pages/user/about/about",
+    "pages/user/order/order",
+    "pages/user/order/view/view",
+    "pages/user/about/view/view",
+    "pages/user/message/message",
+    "pages/user/message/view/view",
+    "pages/user/pay/view/view",
+    "pages/user/pay/view/view/view",
+    "pages/shopping/shopping",
+    "pages/order/order",
+    "pages/balance/balance",
+    "pages/balance/bank/bank",
+    "pages/balance/view/view",
+    "pages/balance/bank/view/view",
+    "pages/balance/deposit/deposit",
+    "pages/balance/withdraw/withdraw",
+    "pages/balance/withdraw/view/view",
+    "pages/register/register",
+    "pages/register/user/user",
+    "pages/register/view/view",
+    "pages/register/user/view/view",
+    "pages/recovery/recovery",
+    "pages/recovery/view/view",
+    "pages/hospital/hospital",
+    "pages/hospital/view/view",
+    "pages/subscribe/subscribe",
+    "pages/subscribe/view/view",
+    "pages/lookCare/lookCare",
+    "pages/lookCare/search/search",
+    "pages/lookCare/details/details",
+    "pages/lookCare/details/view/view",
+    "pages/lookCare/view/details/details",
+    "pages/lookCare/lookCareHome/lookCareHome",
+    "pages/timer/timer",
+    "pages/tailor/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "健身器材1",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "position": "bottom",
+    "color": "#37cf6b",
+    "selectedColor": "#999",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/homepage_block.png",
+        "selectedIconPath": "static/homepage.png"
+      },
+      {
+        "pagePath": "pages/lookCare/lookCare",
+        "text": "运动器材",
+        "iconPath": "static/carer_block.png",
+        "selectedIconPath": "static/carer.png"
+      },
+      {
+        "pagePath": "pages/indent/indent",
+        "text": "订单",
+        "iconPath": "static/indent_block.png",
+        "selectedIconPath": "static/indent.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "产品",
+        "iconPath": "static/product_block.png",
+        "selectedIconPath": "static/product.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "static/user_block.png",
+        "selectedIconPath": "static/user.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

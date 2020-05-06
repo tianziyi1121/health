@@ -1,0 +1,48 @@
+<view class="content">
+  <view class="userData pr">
+    <view class="userName pa fl">
+      <image src="../../static/head.png" mode="aspectFit"></image>
+      <view>
+        <view class="f16">运动健康007</view>
+        <view class="f14">开通会员，享特权</view>
+      </view>
+    </view>
+    <view>
+      <image src="../../static/bj.png" mode="aspectFit"></image>
+    </view>
+  </view>
+  <view class="userTitle f16 f0">会员套餐</view>
+  <view class="userList fl pad30">
+    <view class="subset tac">
+      <view bindtap="bindList" data-type="1" data-price="68.00" class="{{listIndex == 1 ? 'active' : ''}}">
+        <view class="f14 f0">1个月</view>
+        <view class="f12 f9">习惯养成</view>
+        <view class="f16 userPrice fb">￥68.00</view>
+      </view>
+    </view>
+    <view class="subset tac">
+      <view bindtap="bindList" data-type="2" data-price="148.00" class="{{listIndex == 2 ? 'active' : ''}}">
+        <view class="f14 f0">3个月</view>
+        <view class="f12 f9">初见成效</view>
+        <view class="f16 userPrice fb">￥148.00</view>
+      </view>
+    </view>
+    <view class="subset tac">
+      <view bindtap="bindList" data-type="3" data-price="348.00" class="{{listIndex == 3 ? 'active' : ''}}">
+        <view class="f14 f0">12个月</view>
+        <view class="f12 f9">见证脱变</view>
+        <view class="f16 userPrice fb">￥348.00</view>
+      </view>
+    </view>
+  </view>
+  <view class="userTitle f16 f0">会员特权</view>
+  <view class="character pad30">
+    <image src="../../static/plan (1).png" mode="aspectFit"></image>
+    <image src="../../static/plan (2).png" mode="aspectFit"></image>
+  </view>
+  <view class="order-blank"></view>
+  <view class="userFooter pf fl tac f16 fb">
+    <view>￥{{total}}</view>
+    <view bindtap="bindOnce">立即开通</view>
+  </view>
+</view>

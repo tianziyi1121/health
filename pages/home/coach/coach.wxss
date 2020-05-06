@@ -1,0 +1,61 @@
+.titleBox { width: 100%; border: 2rpx solid #eee; border-left: none; border-right: none; background: #fff;}
+.titleBox .title { width: 690rpx; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap;}
+.bindTitle { width:172rpx; height: 80rpx; line-height: 80rpx; color: #6b6b6b;}
+.bindTitle image { width: 20rpx; height: 20rpx; position: absolute; top: 36rpx; right: 16rpx; }
+.bindTitle.active { color: #37cf6b;}
+.imageActive image { animation: imageRotate 0.2s linear forwards;}
+@keyframes imageRotate {
+   0%{ transform: rotate(0deg);} 
+  100%{ transform: rotate(180deg);}
+}
+.vanish image { animation: imageRotate1 0.2s linear forwards;}
+@keyframes imageRotate1 {
+   0%{ transform: rotate(180deg);} 
+  100%{ transform: rotate(0deg);}
+}
+/* currentList */
+.currrentData { margin-top: 70rpx;}
+.currrentData  > view:nth-child(1) { border: 2rpx solid #37cf6b; width: 154rpx; height: 154rpx; border-radius: 50%;}
+.currrentData  > view > image { width: 154rpx; height: 154rpx; border-radius: 50%; display:block;}
+.currrentData .right { width: 488rpx; margin-top: 6rpx; height: 130rpx;}
+.right .rightContent { width: 420rpx;}
+.right .rightContent > view { max-width: 420rpx;}
+.rightContent .title > view:nth-child(2){  margin-left: 16rpx; height: 24rpx; line-height: 24rpx; border: 2rpx solid #37cf6b; padding: 0 10rpx; border-radius:10rpx;}
+.right .collect image { width: 34rpx; height: 34rpx;}
+.right .collect > view { display: inline-block;}
+.contentLine { height: 2rpx; background: #ccc; margin-top: 30rpx;}
+.currentList .price > view:nth-child(2) { width: 518rpx;}
+.price .purchase { height: 80rpx; line-height: 80rpx; }
+.purchase > view:nth-child(1) { color: #ff0000;}
+.purchase > view:nth-child(2){ width: 200rpx; background: #37cf6b; color: #fff;}
+.borderButton { height: 2rpx; background: #ccc;}
+.rightContent text { padding-right: 10rpx;}
+/* pop-up */
+.titlePopUp .shadow { top: 84rpx; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0;}
+.popUpContent {left: 0; width: 100%; background: #f5f5f5; z-index: 1001; opacity: 0;}
+.popUpContent > view { width: 690rpx; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap;}
+.popUpContent > view > view { width: 33.3%; text-align: center; padding: 16rpx 0;}
+.popUpContent > view > view  { display: inline-block;}
+.titlePopUp .upward { animation: upward 0.5s 0.2s linear forwards;}
+@keyframes upward {
+  0%{ top: 384rpx; opacity: 0;}
+  50%{ top: 234rpx; opacity: 1;}
+  100%{ top: 84rpx;opacity: 1;}
+}
+.titlePopUp .downward { animation: downward 0.5s linear forwards;}
+@keyframes downward {
+  0%{ top: 84rpx; opacity: 1;}
+  50%{ top: 234rpx; opacity: 1;}
+  100%{ top: 384rpx;opacity: 0;}
+}
+.titlePopUp .shadow.upward1 { animation: upward1 0.2s linear forwards;}
+@keyframes upward1 {
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+.titlePopUp .shadow.downward1 { animation: downward1 0.2slinear forwards;}
+@keyframes downward1 {
+  0%{ opacity: 1;}
+  100%{ opacity: 0;}
+}
+.active { color: #37cf6b;}

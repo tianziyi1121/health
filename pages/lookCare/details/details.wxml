@@ -1,0 +1,35 @@
+<view class="content">
+  <image mode="aspectFit" class="details-img" src ="../../../static/changtu.jpg"></image>
+  <view class="details-title pr">
+    <view class="pa details-name">
+      <view class="title-name">刘明</view>
+      <view class="title-money">200.00/小时</view>
+      <view class="title-line"></view>
+      <view class="title-list flj">
+        <view>
+          <image src="../../../static/20190620164054.png"></image>
+          <text>规范服务</text>
+        </view>
+         <view>
+          <image src="../../../static/20190620164054.png"></image>
+          <text>34小时维权</text>
+        </view>
+         <view>
+          <image src="../../../static/20190620164054.png"></image>
+          <text>不满意随时换</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="detailsTitlee f16 f0 pad30">私人教练的作用</view>
+  <view></view>
+
+  <view class="lsdetails-line"></view>
+  <view class="details-btn fl pf">
+    <view class="fl">
+      <view bindtap="consent"><checkbox bind value="1" /></view><text bindtap="termSheet" class="f16">《预约条款》</text>
+    </view>
+    <view class="tac f14 {{checked ? 'footerRight' : 'footer-right'}}" bindtap="bindSubscribe">我要预约</view>
+  </view>
+</view>
